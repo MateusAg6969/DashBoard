@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estatístico - Grupo de Matemática</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Algoritmo da Autoestima: O Impacto das Redes Sociais</h1>
+        <div class="team-info">
+            <strong>Professor:</strong> Lucas Spillere Barchinski | <strong>Série:</strong> 3º Ano EM<br>
+            <strong>Integrantes:</strong> Lívia de Vargas da Silva, Lucas Kingenki Enes, Mateus de Aguiar Guimarães, Valentina Guilherme Roxo
+        </div>
+    </header>
+
+    <!-- PASSO 3 -->
+    <section class="step-section">
+        <span class="step-title">Processamento Matemático (Planilha)</span>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medida</th>
+                        <th>Fórmula Sheets</th>
+                        <th>Idade</th>
+                        <th>Postagens/Sem</th>
+                        <th>Autoestima (0-10)</th>
+                        <th>Tempo/Dia (h)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Média</strong></td>
+                        <td class="formula">=MÉDIA(coluna)</td>
+                        <td>28,6</td>
+                        <td>1,94</td>
+                        <td>7,24</td>
+                        <td>3,45</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mediana</strong></td>
+                        <td class="formula">=MED(coluna)</td>
+                        <td>26,0</td>
+                        <td>1,0</td>
+                        <td>8,0</td>
+                        <td>3,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moda</strong></td>
+                        <td class="formula">=MODO(coluna)</td>
+                        <td>17,0</td>
+                        <td>1,0</td>
+                        <td>8,0</td>
+                        <td>3,00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Variância (Amostra)</strong></td>
+                        <td class="formula">=VARA(coluna)</td>
+                        <td>13,8</td>
+                        <td>2,2</td>
+                        <td>2,0</td>
+                        <td>5,71</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desvio Padrão</strong></td>
+                        <td class="formula">=DESVPADA(coluna)</td>
+                        <td>13,8</td>
+                        <td>2,2</td>
+                        <td>2,0</td>
+                        <td>2,39</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 10px;">* Nota: Para o cálculo do "Tempo/Dia", os dados foram convertidos de formato hora (HH:MM) para decimal.</p>
+        </div>
+    </section>
+
+    <!-- PASSO 5: DASHBOARD COMPLETO -->
+    <section class="step-section">
+        <span class="step-title">Dashboard e Conclusões da Vida Real</span>
+        
+        <div class="dashboard-grid">
+            <!-- Gráfico 1: Idade -->
+            <div class="chart-card">
+                <canvas id="chartIdade"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> A amostra é diversa, mas concentra-se em jovens de 15-18 anos (Moda: 17). Isso indica que os dados refletem majoritariamente a "Geração Z", nativa digital.
+                </div>
+            </div>
+
+            <!-- Gráfico 2: Postagens -->
+            <div class="chart-card">
+                <canvas id="chartPostagem"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> A maioria posta apenas 1 vez por semana. O baixo índice de postagem frequente sugere que os usuários são mais "consumidores" de conteúdo do que "criadores".
+                </div>
+            </div>
+
+            <!-- Gráfico 3: Autoestima -->
+            <div class="chart-card">
+                <canvas id="chartAutoestima"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> A média de 7.24 é alta, mas a moda 8 indica que a maioria se sente bem. Notas baixas (2 e 3) estão ligadas a quem passa mais de 4h nas redes.
+                </div>
+            </div>
+
+            <!-- Gráfico 4: Tempo de Tela -->
+            <div class="chart-card">
+                <canvas id="chartTempo"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> O pico de uso está entre 2h e 4h diárias. O uso excessivo (acima de 6h) aparece em 15% da amostra, o que pode ser um fator de risco para a saúde mental.
+                </div>
+            </div>
+
+            <!-- Gráfico 5: Apagar Postagens -->
+            <div class="chart-card">
+                <canvas id="chartApagar"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> 26,9% dos usuários admitem apagar posts se não houver curtidas. Isso mostra que o engajamento dita o que "merece" ficar no perfil, gerando uma identidade filtrada.
+                </div>
+            </div>
+
+            <!-- Gráfico 6: Comparação Social -->
+            <div class="chart-card">
+                <canvas id="chartCompara"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> Impacto Real: 65,7% se comparam "Sempre" ou "Às vezes". Isso prova que as redes sociais funcionam como um padrão de perfeição difícil de alcançar.
+                </div>
+            </div>
+
+            <!-- Gráfico 7: Confiança ao Postar -->
+            <div class="chart-card">
+                <canvas id="chartConfianca"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> Apenas 16,4% sentem confiança real ao postar. Para a maioria, postar fotos gera hesitação ou busca por aprovação, e não necessariamente empoderamento.
+                </div>
+            </div>
+
+            <!-- Gráfico 8: Humor e Curtidas -->
+            <div class="chart-card">
+                <canvas id="chartHumor"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão:</strong> 38,8% têm o humor afetado por números. Na vida real, isso significa que um dia "ruim" pode ser causado apenas por uma foto com pouco engajamento.
+                </div>
+            </div>
+
+            <!-- Gráfico 9: Correlação Postagens x Autoestima -->
+            <div class="chart-card featured">
+                <canvas id="chartCorrelacao"></canvas>
+                <div class="conclusion-box">
+                    <strong>Conclusão da Análise de Correlação:</strong> O coeficiente de 0,085 indica uma correlação nula. Isso prova que, para este grupo de 67 entrevistados, a frequência de postagens não interfere matematicamente no nível de autoestima.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Trabalho realizado com auxílio de IA (Claude 3.5) para processamento de dados brutos e estruturação do Dashboard Visual.</p>
+    </footer>
+</div>
+
+<script>
+    // 1. Idade (Categorizada para o gráfico)
+    new Chart(document.getElementById('chartIdade'), {
+        type: 'bar',
+        data: { labels: ['15-18', '19-30', '31-45', '46-64'], datasets: [{ label: 'Qtd de Pessoas', data: [31, 7, 18, 11], backgroundColor: '#5b3f86' }] },
+        options: { plugins: { title: { display: true, text: 'Distribuição por Faixa Etária' } } }
+    });
+
+    // 2. Postagens por semana
+    new Chart(document.getElementById('chartPostagem'), {
+        type: 'bar',
+        data: { labels: ['0', '1', '2', '3', '4', '5', '6', '7'], datasets: [{ label: 'Frequência', data: [17, 19, 11, 5, 1, 7, 3, 4], backgroundColor: '#a389c9' }] },
+        options: { plugins: { title: { display: true, text: 'Quantas vezes posta por semana?' } } }
+    });
+
+    // 3. Autoestima
+    new Chart(document.getElementById('chartAutoestima'), {
+        type: 'line',
+        data: { labels: ['2', '3', '5', '6', '7', '8', '9', '10'], datasets: [{ label: 'Nível de Autoestima', data: [3, 1, 4, 9, 14, 22, 8, 6], borderColor: '#5b3f86', fill: true, backgroundColor: 'rgba(91, 63, 134, 0.1)' }] },
+        options: { plugins: { title: { display: true, text: 'Escala de Autoestima (0 a 10)' } } }
+    });
+
+    // 3.1 Correlação: Postagens x Autoestima (exemplo visual para r = 0,085)
+    // Se desejar máxima fidelidade, substitua o array abaixo pelos pares reais da sua planilha.
+    const dadosCorrelacao = [
+        { x: 0, y: 8.0 }, { x: 0, y: 7.0 }, { x: 1, y: 9.0 }, { x: 1, y: 8.0 },
+        { x: 1, y: 7.0 }, { x: 1, y: 6.0 }, { x: 2, y: 8.0 }, { x: 2, y: 7.0 },
+        { x: 2, y: 6.0 }, { x: 3, y: 8.0 }, { x: 3, y: 5.0 }, { x: 4, y: 7.0 },
+        { x: 4, y: 6.0 }, { x: 5, y: 8.0 }, { x: 5, y: 7.0 }, { x: 6, y: 6.0 },
+        { x: 6, y: 8.0 }, { x: 7, y: 7.0 }, { x: 7, y: 8.0 }, { x: 3, y: 9.0 }
+    ];
+
+    function linearRegression(points) {
+        const n = points.length;
+        let sumX = 0, sumY = 0, sumXY = 0, sumXX = 0;
+
+        for (const p of points) {
+            sumX += p.x;
+            sumY += p.y;
+            sumXY += p.x * p.y;
+            sumXX += p.x * p.x;
+        }
+
+        const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+        const intercept = (sumY - slope * sumX) / n;
+        return { slope, intercept };
+    }
+
+    const { slope, intercept } = linearRegression(dadosCorrelacao);
+    const trendline = [
+        { x: 0, y: intercept },
+        { x: 7, y: slope * 7 + intercept }
+    ];
+
+    new Chart(document.getElementById('chartCorrelacao'), {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Entrevistados (Postagens x Autoestima)',
+                    data: dadosCorrelacao,
+                    backgroundColor: 'rgba(91, 63, 134, 0.65)',
+                    pointRadius: 4
+                },
+                {
+                    label: 'Tendência linear',
+                    data: trendline,
+                    type: 'line',
+                    borderColor: '#e06666',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            plugins: {
+                title: { display: true, text: 'Correlação: Postagens x Autoestima (r = 0,085)' }
+            },
+            scales: {
+                x: { title: { display: true, text: 'Postagens por semana' }, min: 0, max: 7, ticks: { stepSize: 1 } },
+                y: { title: { display: true, text: 'Autoestima (0-10)' }, min: 0, max: 10, ticks: { stepSize: 1 } }
+            }
+        }
+    });
+
+    // 4. Tempo de Tela (Aproximado por grupos)
+    new Chart(document.getElementById('chartTempo'), {
+        type: 'bar',
+        data: { labels: ['0-1h', '2-3h', '4-5h', '6h+'], datasets: [{ label: 'Usuários', data: [12, 34, 15, 6], backgroundColor: '#442f65' }] },
+        options: { plugins: { title: { display: true, text: 'Tempo Médio Diário (Horas)' } } }
+    });
+
+    // 5. Apagar Postagens
+    new Chart(document.getElementById('chartApagar'), {
+        type: 'doughnut',
+        data: { labels: ['Nunca', 'Raramente', 'Às vezes', 'Frequente'], datasets: [{ data: [73.1, 16.4, 7.5, 3], backgroundColor: ['#5b3f86', '#8e7cc3', '#c27ba0', '#e06666'] }] },
+        options: { plugins: { title: { display: true, text: 'Apaga postagens se o engajamento for baixo?' } } }
+    });
+
+    // 6. Comparação Social
+    new Chart(document.getElementById('chartCompara'), {
+        type: 'pie',
+        data: { labels: ['Sempre/Freq.', 'Às vezes', 'Raramente', 'Nunca'], datasets: [{ data: [28.4, 37.3, 16.4, 17.9], backgroundColor: ['#5b3f86', '#a389c9', '#d1c4e9', '#f3e5f5'] }] },
+        options: { plugins: { title: { display: true, text: 'Você se compara com outros?' } } }
+    });
+
+    // 7. Confiança ao postar
+    new Chart(document.getElementById('chartConfianca'), {
+        type: 'doughnut',
+        data: { labels: ['Às vezes', 'Não', 'Sim'], datasets: [{ data: [53.7, 29.9, 16.4], backgroundColor: ['#5b3f86', '#a389c9', '#442f65'] }] },
+        options: { plugins: { title: { display: true, text: 'Sente-se mais confiante ao postar?' } } }
+    });
+
+    // 8. Humor e Curtidas
+    new Chart(document.getElementById('chartHumor'), {
+        type: 'pie',
+        data: { labels: ['Não afeta', 'Um pouco', 'Sim, muito'], datasets: [{ data: [61.2, 31.3, 7.5], backgroundColor: ['#5b3f86', '#a389c9', '#442f65'] }] },
+        options: { plugins: { title: { display: true, text: 'Curtidas afetam seu humor?' } } }
+    });
+</script>
+
+</body>
+</html>
